@@ -1,18 +1,18 @@
 import { useState } from 'react'
 import './App.css'
 import Input from './components/input'
-import { InputNames } from './inputNames'
+import { InputNames, m } from './inputNames'
 
 function App() {
-  const [tableContent, setTableContent] = useState(InputNames);
+  const [tableContent, setTableContent] = useState(m);
 
-  function handleChange(event, index) {
+  function handleChange(event, ident) {
 
     setTableContent(prevValue => {
-      const tempArr = [...prevValue];
-      tempArr[index].val = Number(event.target.value);
+      const tempArr = {...prevValue};
+      tempArr[ident] = Number(event.target.value);
       return tempArr;
-    })
+    });
 
     console.log(tableContent);
   }
@@ -26,8 +26,8 @@ function App() {
         </h1>
         <div className='grid grid-cols-2 grid-rows-2 gap-2 place-items-center py-6 w-[46vw] bg-gradient-to-tr  to-gray-900 from-neutral-950
         shadow-xl h-[40vh]  rounded-xl border-b-neutral-500 border-r-neutral-500'>
-          {tableContent.map((el, index) => {
-            return <Input key={index} header={el.name} func={ () => handleChange(event, index) } />
+          {InputNames.map((el, index) => {
+            return <Input key={index} header={el} func={ () => handleChange(event, el) } />
             })}
         </div>
       </menu>
