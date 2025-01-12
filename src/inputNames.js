@@ -1,6 +1,6 @@
 export const InputNames = [
-    {name: "INITIAL INVESTMENT",value : 0},
-    {name: "ANNUAL INVESTMENT",value : 0},
-    {name: "EXPECTED RETURN",value : 0},
-    {name: "DURATION", value : 0},
+    {name: "INITIAL INVESTMENT",val : 0},
+    {name: "ANNUAL INVESTMENT",val : 0},
+    {name: "EXPECTED RETURN",val : 0},
+    {name: "DURATION", val : 0},
 ];
