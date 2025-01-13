@@ -1,6 +1,7 @@
-import { useState } from 'react'
 import './App.css'
+import { useState } from 'react'
 import Input from './components/input'
+import Table from './components/table'
 import { InputNames, m } from './inputNames'
 
 function App() {
@@ -14,7 +15,6 @@ function App() {
       return tempArr;
     });
 
-    console.log(tableContent);
   }
 
 
@@ -29,6 +29,9 @@ function App() {
           {InputNames.map((el, index) => {
             return <Input key={index} header={el} func={ () => handleChange(event, el) } />
             })}
+        </div>
+        <div className='h-[36vh] overflow-auto'>
+          <Table content={tableContent} />
         </div>
       </menu>
     </>
