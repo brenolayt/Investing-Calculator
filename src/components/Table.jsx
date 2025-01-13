@@ -1,4 +1,4 @@
-
+import { formatter } from "../utils";
 
 export default function Table({ content }) {
     const arr = [{ tot: content["INITIAL INVESTMENT"], interest: 0, totInterest: 0 }];
@@ -30,10 +30,10 @@ export default function Table({ content }) {
                         return (
                             <tr key={index} className="justify-self-center text-center">
                                 <td>{ index }</td>
-                                <td>${ el.tot.toFixed(0) }</td>
-                                <td>${ el.interest.toFixed(0) }</td>
-                                <td>${ el.totInterest.toFixed(0) }</td>
-                                <td>${ ((content["INITIAL INVESTMENT"] + (content["ANNUAL INVESTMENT"] * index)).toFixed(0)) }</td>
+                                <td>{ formatter.format(el.tot.toFixed(0)) }</td>
+                                <td>{ formatter.format(el.interest.toFixed(0)) }</td>
+                                <td>{ formatter.format(el.totInterest.toFixed(0)) }</td>
+                                <td>{ formatter.format(((content["INITIAL INVESTMENT"] + (content["ANNUAL INVESTMENT"] * index)).toFixed(0))) }</td>
                             </tr>
                         );
                     })}

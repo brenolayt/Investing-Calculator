@@ -2,7 +2,7 @@ import './App.css'
 import { useState } from 'react'
 import Input from './components/input'
 import Table from './components/table'
-import { InputNames, m } from './inputNames'
+import { InputNames, m } from './utils'
 
 function App() {
   const [tableContent, setTableContent] = useState(m);
