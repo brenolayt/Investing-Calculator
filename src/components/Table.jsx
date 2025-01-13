@@ -10,8 +10,6 @@ export default function Table({ content }) {
         arr.push({tot: totVal, interest : inter, totInterest : totInter});
     }
 
-    console.log(arr);
-
     return (
         <>
             <table className="text-white mt-12 w-[55vw] overflow-auto">
