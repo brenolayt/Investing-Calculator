@@ -2,10 +2,10 @@ import './App.css'
 import { useState } from 'react'
 import Input from './components/input'
 import Table from './components/table'
-import { InputNames, m } from './utils'
+import { InputNames } from './utils'
 
 function App() {
-  const [tableContent, setTableContent] = useState(m);
+  const [tableContent, setTableContent] = useState({});
 
   function handleChange(event, ident) {
 
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <menu className='grid justify-items-center grid-rows-[1fr_2fr_2fr] bg-gradient-to-tr from-gray-900 to-stone-800 w-screen h-screen py-12'>
+      <menu className='grid justify-items-center grid-rows-[1fr_2fr_2fr] gap-6 bg-gradient-to-tr from-gray-900 to-stone-800 w-screen h-screen py-12'>
         <h1 className='inline-block bg-gradient-to-r from-amber-300 via-amber-500 to-yellow-600 drop-shadow-xl font-bold text-5xl text-transparent bg-clip-text'>
           Investment Calculator
         </h1>
